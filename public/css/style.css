@@ -1,0 +1,497 @@
+/* Normalización */
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* VARIABLES */
+
+:root {
+    --amarillo: #EAC926;
+    --azul: #03264C;
+    --celeste: #1259c3;
+    --gris-oscuro: #666;
+    --gris-claro: #ebebeb;
+    --verde: #39b54a;
+    --negro: #000;
+    --blanco: #fff;
+    /* TAMAÑOS DE FUENTES */
+    --text-sm: 1.2em;
+    --text-md: 1.6em;
+    --text-lg: 1.8em;
+    --title-md: 2.4em;
+    /* FAMILIAS DE FUENTES */
+    --roboto: 'Roboto', sans-serif;
+}
+
+/* ESTILOS COMUNES */
+
+html {
+    font-size: 62.5%;
+    font-family: var(--roboto);
+}
+body {
+    background-color: var(--gris-claro);
+}
+h2 {
+    font-size: var(--title-md);
+}
+p {
+    font-size: var(--title-sm);
+}
+
+.flex-row {
+    display: flex;
+    align-items: stretch;
+    gap:20px; /* COMENTAR SI SE UTILIZA WIDTH 30% Y 70% EN PRICE Y DISCOUNT */
+    flex-wrap: wrap;
+}
+
+
+/* HEADER */
+header {
+    background-color: var(--amarillo);
+}
+
+div.top-header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5%;
+    align-items: center;
+    
+}
+
+header picture.logo {
+    display: block;
+    width: 50%;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    align-self: center;
+    
+}
+
+/* .buy {
+    
+} */
+
+.login {
+    justify-content: center;
+    position: relative;
+}
+
+.nombreUsuario, .contrasena {
+    width: 100%;
+    padding: 7px;
+    border-style: none;
+    border-radius: .7rem;
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+    position: relative;
+    align-self: center;
+    
+
+}
+.enviar-button {
+    color: #fff;
+    width: 100%;
+    padding: 7px;
+    border-style: none;
+    border-radius: .7rem;
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+    position: relative;
+    background-color: #1770ac;
+}
+
+.main-login {
+    background-color: var(--gris-claro);
+    padding: 70px 70px 70px 70px;
+    margin-bottom: 70px;
+}
+
+header nav {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: var(--text-md);
+    
+}
+
+header .options-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+    margin: 10px 20px 10px 20px;
+}
+
+
+header ul li {
+    list-style-type: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--negro);
+}
+header .form .input{
+    background-color: var(--blanco);
+    border: 1px solid gray;
+    border-radius: 5px 0 0 5px;
+    color: var(--gris-oscuro);
+    padding: 2px;
+    width: 90%;
+    text-align: center;
+}
+
+header .form .submit {
+    background-color: var(--blanco);
+    border-style: none;
+    border: 1px solid gray;
+    border-radius: 0 5px 5px 0;
+    width: 18px;
+    padding: 7px;
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 10%;
+    
+    
+}
+
+header div.top-header p {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+div.burger-menu {
+    text-align: center;
+}
+
+div.burger-menu i{
+    background-color: #0044AA;
+    font-size: 20px;
+    color: var(--blanco);
+    height: 40px;
+    width: 40px;
+    margin: 10px 0 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* BANNER */
+
+section.banner img {
+    width: 100%;
+}
+
+/* MAIN */
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+main .formulario h4 {
+    font-weight: bold;
+}
+
+main section article {
+    background-color: var(--blanco);
+    margin: 10px 0;
+}
+
+main section article:hover {
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+}
+
+main section article img {
+    width: 100%;
+}
+
+
+
+h2, .description {
+    color: var(--gris-oscuro);
+}
+
+
+.price {
+    font-size: var(--text-lg);
+     /*width:30%;*/
+}
+
+.discount, .description {
+    font-size: var(--text-md);
+}
+
+.description {
+    opacity: 0;
+    transition:  opacity 0.3s ease-in-out;
+}
+
+main section article i, .discount {
+    color: var(--verde);
+}
+
+main section article:hover .description {
+    opacity: 1;
+}   
+
+main section article i {
+    font-size: var(--text-md);
+    color: var(--verde);
+    border: 1px solid var(--verde);
+    border-radius: 50%;
+    display: block;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    background-color:#FFF;
+    border-radius:50%;
+    position:absolute;
+    right:20px;
+    top:-15px;
+    transition: transform 0.3s ease-in;
+}
+
+main section article i:hover {
+    transform: rotate(-90deg);
+}
+
+
+
+main section h3 {
+    margin: 20px 0px;
+}
+
+article div.product-cart {
+    width: 100%;
+    border: 1px solid var(--gris-claro);
+    padding: 15px;
+    position:relative;
+}
+
+/* REGISTER */
+
+.input-register {
+    background-color: var(--blanco);
+    border: 1px solid gray;
+    color: var(--gris-oscuro);
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 7px;
+    border-style: none;
+    border-radius: .7rem;
+    font-size: 15px;
+    
+}
+.titulo-register {
+    align-self: center;
+    text-align: center;
+    position: relative;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.reset-button {
+    color: #fff;
+    width: 100%;
+    padding: 7px;
+    border-style: none;
+    border-radius: .7rem;
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+    position: relative;
+    background-color: red;
+}
+
+.enviar-button-register {
+    color: #fff;
+    width: 100%;
+    padding: 7px;
+    border-style: none;
+    border-radius: .7rem;
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+    position: relative;
+    background-color: #1770ac;
+}
+.titulo-option {
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #FFF;
+    
+
+   
+}
+
+.piedepagina{
+    margin: 30px;
+    padding: 0px 50px 0px 50px;
+    
+    
+}
+
+footer div.tarjeta-credito {
+    color: #1770ac;
+    text-align: center;
+    font-size: 2em;
+    margin: 10px 0px 0px 0px;
+    padding: 20px 0px 0px 0px;
+}
+
+footer div.regalo {
+    color: #1770ac;
+    text-align: center;
+    font-size: 2em;
+}
+
+footer div.seguridad {
+    color: #1770ac;
+    text-align: center;
+    font-size: 2em;
+}
+
+footer div.piedepagina p {
+    text-align: center;
+    color: var(--gris-oscuro);
+    align-self: center;
+ 
+}
+
+footer div.piedepagina h1 {
+    text-align: center;
+    padding: 5px 0px 0px 0px;
+    color: var(--gris-oscuro);
+    align-self: center;
+}
+
+footer section {
+    margin: 10px;
+}
+
+/* RESPONSIVE  */
+
+
+@media screen and (min-width: 415px) {
+
+    header nav {
+        display: flex;
+    }
+
+    nav ul {
+        display:flex;
+    }
+
+    .description {
+        opacity: 1;
+        
+    }
+
+    .products-container {
+        display: flex;
+        gap:10px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .products-container article {
+        max-width: 45%;
+    }
+
+   /*  main section article {
+        box-shadow: 0px 0px 10px rgb( 100 , 100 , 100 );
+    } */
+
+    .main-login {
+        background-color: var(--gris-claro);
+        padding: 20px 200px 70px 200px;
+        margin-bottom: 70px;
+    }
+
+    
+
+
+
+}
+
+@media screen and (min-width: 915px) {
+    .products-container article {
+        max-width: 22%;
+    }
+   
+
+}
+
+@media screen and (max-width: 415px) {
+
+    header nav {
+        display: none;
+    }    
+
+    div.top-header {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5%;
+        align-items: center;
+        /* gap: 1em; */
+    }
+
+    header picture.logo {
+        display: block;
+        width: 100%;
+    }
+
+    .form {
+        width: 100%;
+        display: flex;
+        align-self: center;
+        
+    }
+
+    header div.top-header p {
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+
+
+@media screen and (min-width: 415px) {
+
+    header .burger-menu {
+        display: none;
+    }    
+
+
+
+
+
+}
+
+
+
